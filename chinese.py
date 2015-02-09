@@ -290,6 +290,6 @@ print 'Characters: '  + words[choice]['character'].encode('utf-8')
 print 'Pinyin: %s'      % words[choice]['pinyin'].encode('utf-8')
 print 'Type: '        + words[choice]['type']
 print 'Translation: ' + words[choice]['translation']
-print '-'*40
+
 
 
