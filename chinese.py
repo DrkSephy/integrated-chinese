@@ -1,8 +1,6 @@
 # coding: utf8
-# print u'你'.encode('utf-8')
 import random
 import argparse
-
 
 words = [
     # Chapter 1: Vocabulary
