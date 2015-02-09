@@ -16,12 +16,14 @@ Learn Chinese vocabulary inside of your terminal! Vocabulary words are taken fro
 
 # Installation
 
-1. Clone this repository. 
-2. Run: `python chinese.py`.
+1. Clone this repository 
+2. Run: `python chinese.py`
 
 If you would like this to run each time you open up a new terminal, add the following line your `.bash_profile` file as shown below:
 	
     python path/to/chinese.py/chinese.py
+
+# Specify specific chapter for word generation
 
 Are you only interested in generating words from a specific chapter? If so, you can add the following command line argument to your `python chinese.py` call:
 
