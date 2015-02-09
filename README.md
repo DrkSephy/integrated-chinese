@@ -13,3 +13,14 @@ Learn Chinese vocabulary inside of your terminal! Vocabulary words are taken fro
 	Type:          measure word
 	Translation:   (polite measure word for people)
 
+
+# Installation
+
+1. Clone this repository. 
+2. Run: `python chinese.py`.
+
+If you would like this to run each time you open up a new terminal, edit your `.bashrc` file as shown below:
+
+    python path/to/chinese.py/chinese.py
+    
+
