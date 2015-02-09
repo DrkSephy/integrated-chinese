@@ -6,8 +6,10 @@ Learn Chinese vocabulary inside of your terminal! Vocabulary words are taken fro
     ----------------------------------------
        Integrated Chinese Word of the Day
     ----------------------------------------
-    Characters: 听
-    Pinyin: tīng
-    Type: verb
-    Translation: to listen
+	Chapter:       6
+	Vocabulary ID: 8
+	Characters:    位
+	Pinyin:        wèi
+	Type:          measure word
+	Translation:   (polite measure word for people)
 
