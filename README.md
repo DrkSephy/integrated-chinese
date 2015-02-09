@@ -23,7 +23,7 @@ If you would like this to run each time you open up a new terminal, add the foll
 	
     python path/to/chinese.py/chinese.py
 
-# Specify specific chapter for word generation
+### Specify specific chapter for word generation
 
 Are you only interested in generating words from a specific chapter? If so, you can add the following command line argument to your `python chinese.py` call:
 
