@@ -564,86 +564,36 @@ Chapter6 = [
     {'character': u'回来', 'chapter': 6, 'id': 12,    'pinyin': u'huí lai',        'type': 'verb plus complement',     'translation': 'to come back'},
 ]
 
+
+def selectWord(chapter):
+    choice = random.randint(0, len(chapter) - 1)
+    print '-'*40
+    print '   Integrated Chinese Word of the Day'
+    print '-'*40
+    print 'Chapter:       ' + str(chapter[choice]['chapter'])
+    print 'Vocabulary ID: ' + str(chapter[choice]['id'])
+    print 'Characters:    ' + chapter[choice]['character'].encode('utf-8')
+    print 'Pinyin:        ' + chapter[choice]['pinyin'].encode('utf-8')
+    print 'Type:          ' + chapter[choice]['type']
+    print 'Translation:   ' + chapter[choice]['translation']
+
 parser = argparse.ArgumentParser(description='Select a chapter.')
 parser.add_argument('-o', '--chapter', help='Select a particular chapter')
 args = parser.parse_args()
 if args.chapter == '1':
-    choice = random.randint(0, len(Chapter1) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter1[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter1[choice]['id'])
-    print 'Characters:    ' + Chapter1[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter1[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter1[choice]['type']
-    print 'Translation:   ' + Chapter1[choice]['translation']
+    selectWord(Chapter1)
 elif args.chapter == '2':
-    choice = random.randint(0, len(Chapter2) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter2[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter2[choice]['id'])
-    print 'Characters:    ' + Chapter2[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter2[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter2[choice]['type']
-    print 'Translation:   ' + Chapter2[choice]['translation']
+    selectWord(Chapter2)
 elif args.chapter == '3':
-    choice = random.randint(0, len(Chapter3) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter3[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter3[choice]['id'])
-    print 'Characters:    ' + Chapter3[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter3[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter3[choice]['type']
-    print 'Translation:   ' + Chapter3[choice]['translation']
+    selectWord(Chapter3)
 elif args.chapter == '4':
-    choice = random.randint(0, len(Chapter4) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter4[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter4[choice]['id'])
-    print 'Characters:    ' + Chapter4[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter4[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter4[choice]['type']
-    print 'Translation:   ' + Chapter4[choice]['translation']
+    selectWord(Chapter4)
 elif args.chapter == '5':
-    choice = random.randint(0, len(Chapter5) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter5[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter5[choice]['id'])
-    print 'Characters:    ' + Chapter5[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter5[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter5[choice]['type']
-    print 'Translation:   ' + Chapter5[choice]['translation']
+    selectWord(Chapter5)
 elif args.chapter == '6':
-    choice = random.randint(0, len(Chapter6) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(Chapter6[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(Chapter6[choice]['id'])
-    print 'Characters:    ' + Chapter6[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + Chapter6[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + Chapter6[choice]['type']
-    print 'Translation:   ' + Chapter6[choice]['translation']
+    selectWord(Chapter6)
 else:
-    choice = random.randint(0,len(words) - 1)
-    print '-'*40
-    print '   Integrated Chinese Word of the Day'
-    print '-'*40
-    print 'Chapter:       ' + str(words[choice]['chapter'])
-    print 'Vocabulary ID: ' + str(words[choice]['id'])
-    print 'Characters:    ' + words[choice]['character'].encode('utf-8')
-    print 'Pinyin:        ' + words[choice]['pinyin'].encode('utf-8')
-    print 'Type:          ' + words[choice]['type']
-    print 'Translation:   ' + words[choice]['translation']
+    selectWord(words)
 
 
 
