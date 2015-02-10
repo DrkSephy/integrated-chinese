@@ -575,6 +575,12 @@ def selectWord(chapter):
     print 'Type:          ' + chapter[choice]['type']
     print 'Translation:   ' + chapter[choice]['translation']
 
+def quizRunner(chapter):
+    # Print out all problem sets
+    # Problem looper
+    for problem in chapter:
+        print problem['character']
+
 parser = argparse.ArgumentParser(description='Select a chapter.')
 # Parameter for chapter argument
 parser.add_argument('--chapter', help='Select a particular chapter')
@@ -594,12 +600,16 @@ elif args.chapter == '5' and not args.quiz:
     selectWord(Chapter5)
 elif args.chapter == '6' and not args.quiz:
     selectWord(Chapter6)
+# Run interactive quiz mode for a chapter
+elif args.chapter and args.quiz:
+    if args.chapter == '1':
+        quizRunner(Chapter1)
 else:
     selectWord(words)
 
 
-def quizRunner():
-    print "Interactive Quiz Mode"
+
+
 
 
 
