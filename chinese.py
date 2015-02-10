@@ -576,8 +576,12 @@ def selectWord(chapter):
     print 'Translation:   ' + chapter[choice]['translation']
 
 parser = argparse.ArgumentParser(description='Select a chapter.')
-parser.add_argument('-o', '--chapter', help='Select a particular chapter')
+# Parameter for chapter argument
+parser.add_argument('--chapter', help='Select a particular chapter')
+# Parameter for quiz argument
+parser.add_argument('--quiz', help='Enter interactive quiz mode?')
 args = parser.parse_args()
+print args
 if args.chapter == '1':
     selectWord(Chapter1)
 elif args.chapter == '2':
