@@ -578,26 +578,28 @@ def selectWord(chapter):
 parser = argparse.ArgumentParser(description='Select a chapter.')
 # Parameter for chapter argument
 parser.add_argument('--chapter', help='Select a particular chapter')
-# Parameter for quiz argument
+# Parameter for quiz argument (0/1)
 parser.add_argument('--quiz', help='Enter interactive quiz mode?')
 args = parser.parse_args()
 print args
-if args.chapter == '1':
+if args.chapter == '1' and not args.quiz:
     selectWord(Chapter1)
-elif args.chapter == '2':
+elif args.chapter == '2' and not args.quiz:
     selectWord(Chapter2)
-elif args.chapter == '3':
+elif args.chapter == '3' and not args.quiz:
     selectWord(Chapter3)
-elif args.chapter == '4':
+elif args.chapter == '4' and not args.quiz:
     selectWord(Chapter4)
-elif args.chapter == '5':
+elif args.chapter == '5' and not args.quiz:
     selectWord(Chapter5)
-elif args.chapter == '6':
+elif args.chapter == '6' and not args.quiz:
     selectWord(Chapter6)
 else:
     selectWord(words)
 
 
+def quizRunner():
+    print "Interactive Quiz Mode"
 
 
 
