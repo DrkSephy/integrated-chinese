@@ -1,6 +1,7 @@
 # coding: utf8
 import random
 import argparse
+from random import randrange, sample
 
 words = [
     # Chapter 1: Vocabulary
@@ -575,11 +576,34 @@ def selectWord(chapter):
     print 'Type:          ' + chapter[choice]['type']
     print 'Translation:   ' + chapter[choice]['translation']
 
-def quizRunner(chapter):
-    # Print out all problem sets
-    # Problem looper
-    for problem in chapter:
-        print problem['character']
+def randomInsert(list, item):
+    list.insert(randrange(len(list)+1), item)
+
+def quizRunner(chapter, num):
+    print '-'*40
+    print '             Chapter ' + str(num) + ' Quiz'
+    print '-'*40
+    print '\n'
+    print 'Enter a number to select a choice!'
+
+    # Randomize list of problems
+    # Problems will be randomly chosen from that chapter
+    problemList = random.sample(range(0, len(chapter)), len(chapter))
+    #print randomList
+    for problem in problemList:
+        # Get list of choices to display
+        choices = random.sample(range(0, len(chapter)), 3)
+        # Insert the right answer into the list
+        randomInsert(choices, problem)
+        # Print the word we want to guess the translation for
+        print 'Word: ' + chapter[problem]['character']
+        for choice in choices:
+            # print chapter[choice]['translation']
+            print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
+            #print choices.index(choice)
+            #print '[' + str(choices.index(choice)) + ']' + ' ' + chapter[choice]['translation']
+
+        
 
 parser = argparse.ArgumentParser(description='Select a chapter.')
 # Parameter for chapter argument
@@ -603,7 +627,7 @@ elif args.chapter == '6' and not args.quiz:
 # Run interactive quiz mode for a chapter
 elif args.chapter and args.quiz:
     if args.chapter == '1':
-        quizRunner(Chapter1)
+        quizRunner(Chapter1, args.chapter)
 else:
     selectWord(words)
 
