@@ -55,7 +55,7 @@ Which will cause your terminal to display only words from Chapter 5 upon opening
 
 
 	[0]: (a personal name)
-	[1]:  Miss; young lady
+	[1]: Miss; young lady
 	[2]: I; me
 	[3]: Beijing
 
