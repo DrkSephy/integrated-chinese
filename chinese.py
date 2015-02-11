@@ -269,7 +269,7 @@ words = [
     {'character': u'中文', 'chapter': 6, 'id': 2,    'pinyin': u'zhōngwén',      'type': 'noun',        'translation': 'Chinese language'},
     {'character': u'文 ', 'chapter': 6, 'id': '2-alt',    'pinyin': u'wén',            'type': 'noun',       'translation': 'language; script; written language'},
     {'character': u'帮 ', 'chapter': 6, 'id': 3,    'pinyin': u'bāng',           'type': 'verb',     'translation': 'to help'},
-    {'character': u'准备', 'chapter': 6, 'id': 4,    'pinyin': u'zhǔnbèi',        'type': 'verb',    'translation': ' to prepare'},
+    {'character': u'准备', 'chapter': 6, 'id': 4,    'pinyin': u'zhǔnbèi',        'type': 'verb',    'translation': 'to prepare'},
     {'character': u'练习', 'chapter': 6, 'id': 5,   'pinyin': u'liànxí',         'type': 'verb',    'translation': ' to practice'},
     {'character': u'说 ', 'chapter': 6, 'id': 6,    'pinyin': u'shuō',           'type': 'verb',     'translation': 'to say, to speak'},
     {'character': u'啊 ', 'chapter': 6, 'id': 7,    'pinyin': u'a',              'type': 'particle',     'translation': '(a sentence-final particle of exclamation, interrogation, etc.)'},
@@ -551,7 +551,7 @@ Chapter6 = [
     {'character': u'中文', 'chapter': 6, 'id': 2,    'pinyin': u'zhōngwén',      'type': 'noun',        'translation': 'Chinese language'},
     {'character': u'文 ', 'chapter': 6, 'id': '2-alt',    'pinyin': u'wén',            'type': 'noun',       'translation': 'language; script; written language'},
     {'character': u'帮 ', 'chapter': 6, 'id': 3,    'pinyin': u'bāng',           'type': 'verb',     'translation': 'to help'},
-    {'character': u'准备', 'chapter': 6, 'id': 4,    'pinyin': u'zhǔnbèi',        'type': 'verb',    'translation': ' to prepare'},
+    {'character': u'准备', 'chapter': 6, 'id': 4,    'pinyin': u'zhǔnbèi',        'type': 'verb',    'translation': 'to prepare'},
     {'character': u'练习', 'chapter': 6, 'id': 5,   'pinyin': u'liànxí',         'type': 'verb',    'translation': ' to practice'},
     {'character': u'说 ', 'chapter': 6, 'id': 6,    'pinyin': u'shuō',           'type': 'verb',     'translation': 'to say, to speak'},
     {'character': u'啊 ', 'chapter': 6, 'id': 7,    'pinyin': u'a',              'type': 'particle',     'translation': '(a sentence-final particle of exclamation, interrogation, etc.)'},
@@ -680,7 +680,7 @@ elif args.chapter and args.quiz:
     elif args.chapter == '5':
         quizRunner(Chapter5, args.chapter)
     elif args.chapter == '6':
-        quizRunner(Chapter1, args.chapter)
+        quizRunner(Chapter6, args.chapter)
     else:
         selectWord(words)
 else:
