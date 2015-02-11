@@ -605,7 +605,7 @@ def quizRunner(chapter, num):
         #print choices
         # Print the word we want to guess the translation for
         print '-'*40
-        print '               Problem ' + str(problemNum) 
+        print '      Chapter ' + str(num) + ' Quiz: ' + 'Problem # ' + str(problemNum) 
         print '-'*40
         print 'Word: ' + chapter[problem]['character']
         for choice in choices:
