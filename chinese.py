@@ -594,6 +594,7 @@ def quizRunner(chapter, num):
     problemNum = 1
     numCorrect = 0
     numWrong = 0
+    exit = False
     #print randomList
     for problem in problemList:
         
@@ -602,16 +603,21 @@ def quizRunner(chapter, num):
         # Insert the right answer into the list
         randomInsert(choices, problem)
         print "The right answer is: " + str(choices.index(problem))
-        #print choices
-        # Print the word we want to guess the translation for
+        # Print headers
         print '-'*40
         print '      Chapter ' + str(num) + ' Quiz: ' + 'Problem # ' + str(problemNum) 
         print '-'*40
         print 'Word: ' + chapter[problem]['character']
+
         for choice in choices:
             print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
         print '\n'
-        playerChoice = int(raw_input('Which translation is correct? '))
+        playerChoice = raw_input('Which translation is correct? ')
+        if playerChoice == 'q':
+            exit = True
+            break
+        else:
+            playerChoice = int(playerChoice)
         while playerChoice > 3:
             print 'You did not select one of the choices above. Please try again.'
             playerChoice = int(raw_input('Which translation is correct? '))
