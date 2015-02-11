@@ -585,6 +585,7 @@ def quizRunner(chapter, num):
     print '-'*40
     print '\n'
     print 'Enter a number to select a choice!'
+    print 'Press q to quit at any time.'
     print '\n'
 
     # Randomize list of problems
@@ -595,11 +596,12 @@ def quizRunner(chapter, num):
     numWrong = 0
     #print randomList
     for problem in problemList:
-        print "The right answer is: " + str(problem)
+        
         # Get list of choices to display
         choices = random.sample(range(0, len(chapter)), 3)
         # Insert the right answer into the list
         randomInsert(choices, problem)
+        print "The right answer is: " + str(choices.index(problem))
         #print choices
         # Print the word we want to guess the translation for
         print '-'*40
@@ -607,8 +609,7 @@ def quizRunner(chapter, num):
         print '-'*40
         print 'Word: ' + chapter[problem]['character']
         for choice in choices:
-            print '[' +  str((choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
-            # print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
+            print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
         print '\n'
         playerChoice = int(raw_input('Which translation is correct? '))
         while playerChoice > 3:
@@ -617,15 +618,16 @@ def quizRunner(chapter, num):
         print '\n'
         if chapter[choices[playerChoice]]['translation'] == chapter[problem]['translation']:
             print 'Correct!'
+            numCorrect += 1
         else:
             print 'Not quite...the correct answer was: ' + chapter[problem]['translation']
+            numWrong += 1
         print '\n'
         problemNum += 1
-        # Now we need to see if the user selected the right one
-        #print chapter[choices[playerChoice]]['translation'] 
-
-        
-
+    # Print out report to the user:)
+    print 'You got ' + str(numCorrect) + ' right!'
+    print 'You got ' + str(numWrong) + ' wrong....'
+    
 parser = argparse.ArgumentParser(description='Select a chapter.')
 # Parameter for chapter argument
 parser.add_argument('--chapter', help='Select a particular chapter')
