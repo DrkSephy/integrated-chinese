@@ -585,23 +585,44 @@ def quizRunner(chapter, num):
     print '-'*40
     print '\n'
     print 'Enter a number to select a choice!'
+    print '\n'
 
     # Randomize list of problems
     # Problems will be randomly chosen from that chapter
     problemList = random.sample(range(0, len(chapter)), len(chapter))
+    problemNum = 1
+    numCorrect = 0
+    numWrong = 0
     #print randomList
     for problem in problemList:
+        print "The right answer is: " + str(problem)
         # Get list of choices to display
         choices = random.sample(range(0, len(chapter)), 3)
         # Insert the right answer into the list
         randomInsert(choices, problem)
+        #print choices
         # Print the word we want to guess the translation for
+        print '-'*40
+        print '               Problem ' + str(problemNum) 
+        print '-'*40
         print 'Word: ' + chapter[problem]['character']
         for choice in choices:
-            # print chapter[choice]['translation']
-            print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
-            #print choices.index(choice)
-            #print '[' + str(choices.index(choice)) + ']' + ' ' + chapter[choice]['translation']
+            print '[' +  str((choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
+            # print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
+        print '\n'
+        playerChoice = int(raw_input('Which translation is correct? '))
+        while playerChoice > 3:
+            print 'You did not select one of the choices above. Please try again.'
+            playerChoice = int(raw_input('Which translation is correct? '))
+        print '\n'
+        if chapter[choices[playerChoice]]['translation'] == chapter[problem]['translation']:
+            print 'Correct!'
+        else:
+            print 'Not quite...the correct answer was: ' + chapter[problem]['translation']
+        print '\n'
+        problemNum += 1
+        # Now we need to see if the user selected the right one
+        #print chapter[choices[playerChoice]]['translation'] 
 
         
 
