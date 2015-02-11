@@ -584,7 +584,7 @@ def quizRunner(chapter, num):
     print '             Chapter ' + str(num) + ' Quiz'
     print '-'*40
     print '\n'
-    print 'Enter a number to select a choice!'
+    print 'Enter a number and press [ENTER] to select a choice!'
     print 'Press q to quit at any time.'
     print '\n'
 
