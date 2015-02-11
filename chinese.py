@@ -597,30 +597,45 @@ def quizRunner(chapter, num):
     exit = False
     #print randomList
     for problem in problemList:
-        
         # Get list of choices to display
-        choices = random.sample(range(0, len(chapter)), 3)
-        # Insert the right answer into the list
-        randomInsert(choices, problem)
-        print "The right answer is: " + str(choices.index(problem))
+        choices = random.sample(range(0, len(chapter)), 4)
+        # If there is a duplicate, replace it
+        if problem in choices:
+            choices[choices.index(problem)] = problem
+        else:
+            randIndex = randrange(0, len(choices))
+            choices[randIndex] = problem
+        # print "The right answer is: " + str(choices.index(problem))
         # Print headers
         print '-'*40
         print '      Chapter ' + str(num) + ' Quiz: ' + 'Problem # ' + str(problemNum) 
         print '-'*40
+        print '\n'
         print 'Word: ' + chapter[problem]['character']
+        print '\n'
 
         for choice in choices:
             print '[' +  str(choices.index(choice)) + ']' + ':' + ' '  + chapter[choice]['translation']
         print '\n'
-        playerChoice = raw_input('Which translation is correct? ')
-        if playerChoice == 'q':
-            exit = True
+
+        while True:
+            playerChoice = raw_input('Which translation is correct? ')
+            if playerChoice == 'q':
+                exit = True
+                break
+            else:
+                if playerChoice == '':
+                    print 'You did not select one of the choices above. Please try again.'
+                else: 
+                    playerChoice = int(playerChoice)
+                    if playerChoice > 3:
+                        print 'You did not select one of the choices above. Please try again.'
+                    else:
+                        break
+        # Exit program
+        if exit:
             break
-        else:
-            playerChoice = int(playerChoice)
-        while playerChoice > 3:
-            print 'You did not select one of the choices above. Please try again.'
-            playerChoice = int(raw_input('Which translation is correct? '))
+
         print '\n'
         if chapter[choices[playerChoice]]['translation'] == chapter[problem]['translation']:
             print 'Correct!'
@@ -630,7 +645,6 @@ def quizRunner(chapter, num):
             numWrong += 1
         print '\n'
         problemNum += 1
-    # Print out report to the user:)
     print 'You got ' + str(numCorrect) + ' right!'
     print 'You got ' + str(numWrong) + ' wrong....'
     
@@ -640,7 +654,7 @@ parser.add_argument('--chapter', help='Select a particular chapter')
 # Parameter for quiz argument (0/1)
 parser.add_argument('--quiz', help='Enter interactive quiz mode?')
 args = parser.parse_args()
-print args
+
 if args.chapter == '1' and not args.quiz:
     selectWord(Chapter1)
 elif args.chapter == '2' and not args.quiz:
@@ -657,6 +671,18 @@ elif args.chapter == '6' and not args.quiz:
 elif args.chapter and args.quiz:
     if args.chapter == '1':
         quizRunner(Chapter1, args.chapter)
+    elif args.chapter == '2':
+        quizRunner(Chapter2, args.chapter)
+    elif args.chapter == '3':
+        quizRunner(Chapter3, args.chapter)
+    elif args.chapter == '4':
+        quizRunner(Chapter4, args.chapter)
+    elif args.chapter == '5':
+        quizRunner(Chapter5, args.chapter)
+    elif args.chapter == '6':
+        quizRunner(Chapter1, args.chapter)
+    else:
+        selectWord(words)
 else:
     selectWord(words)
 
