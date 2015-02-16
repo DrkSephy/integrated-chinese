@@ -638,15 +638,15 @@ def quizRunner(chapter, num):
 
         print '\n'
         if chapter[choices[playerChoice]]['translation'] == chapter[problem]['translation']:
-            print 'Correct!'
+            print '\033[92mCorrect!\033[0m'
             numCorrect += 1
         else:
-            print 'Not quite...the correct answer was: ' + chapter[problem]['translation']
+            print '\033[91mNot quite...the correct answer was: ' + chapter[problem]['translation'] + '\033[0m'
             numWrong += 1
         print '\n'
         problemNum += 1
-    print 'You got ' + str(numCorrect) + ' right!'
-    print 'You got ' + str(numWrong) + ' wrong....'
+    print '\033[92mYou got ' + str(numCorrect) + ' right!\033[0m'
+    print '\033[91mYou got ' + str(numWrong) + ' wrong....\033[0m'
     
 parser = argparse.ArgumentParser(description='Select a chapter.')
 # Parameter for chapter argument
