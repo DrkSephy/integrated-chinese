@@ -312,5 +312,22 @@ deck = {
         {'character': u'汉字  ', 'chapter': 7, 'id': 24,     'pinyin': u'Hànzì',            'type': 'noun',      'translation': 'Chinese characters'},
         {'character': u'难 ', 'chapter': 7, 'id': 25,    'pinyin': u'nán',             'type': 'adjective',   'translation': 'difficult '},
 
+        #Chapter 7
+        #page 190
+        {'character': u'平常  ', 'chapter': 7, 'id': 1,    'pinyin': u'píngcháng',              'type': 'adverb',     'translation': 'usually'},
+        {'character': u'早   ', 'chapter': 7, 'id': 2,    'pinyin': u'zăo',       'type': 'adjective',       'translation': 'early'},
+        {'character': u'这么 ', 'chapter': 7, 'id': 3,   'pinyin': u'zhème',           'type': 'pronoun',        'translation': 'so; this (late, etc.)     '},
+        {'character': u'晚  ', 'chapter': 7, 'id': 4,    'pinyin': u'wăn',           'type': 'particle',    'translation': '(a structural particle)'},
+        {'character': u'早上  ', 'chapter': 7, 'id': 5,    'pinyin': u'zăoshang',              'type': 'time word',        'translation': 'morning'},
+        {'character': u'功课  ', 'chapter': 7, 'id': 6,    'pinyin': u'gōngkè',              'type': 'noun',     'translation': 'homework; schoolwork'},
+        {'character': u'大家  ', 'chapter': 7, 'id': 7,    'pinyin': u'dàjiā',              'type': 'pronoun',      'translation': 'everyone'},
+        {'character': u'上课  ', 'chapter': 7, 'id':  8,   'pinyin': u'shàng kè',           'type': 'verb plus object',      'translation': 'to go to class; to start a class; to be in class '},
+        {'character': u'开始  ', 'chapter': 7, 'id': 9,    'pinyin': u'kāishĭ',              'type': 'verb/noun',        'translation': 'to begin, to start; beginning'},
+        {'character': u'念 ', 'chapter': 7, 'id': 10,    'pinyin': u'niàn',             'type': 'verb',        'translation': 'to read aloud '},
+        {'character': u'课文', 'chapter': 7, 'id': 11,    'pinyin': u'kèwén',           'type': 'noun',        'translation': 'text of a lesson  '},
+        {'character': u'录音 ', 'chapter': 7, 'id': 12,   'pinyin': u'lùyīn',             'type': 'noun/verb plus object',        'translation': 'sound recording; to record'},
+        {'character': u'学习  ', 'chapter': 7, 'id': 13,     'pinyin': u'xuéxí',               'type': 'verb',      'translation': 'to study; to learn'},
+        {'character': u'帅 ', 'chapter': 7, 'id': 14,    'pinyin': u'shuài',           'type': 'adjective',     'translation':  'handsome '},
+        {'character': u'酷  ', 'chapter': 7, 'id': 15,    'pinyin': u'kù',              'type': 'adjective',     'translation': 'cool'},
     ]
 }
