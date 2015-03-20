@@ -2,7 +2,7 @@
 
 Learn Chinese vocabulary inside of your terminal! Vocabulary words are taken from the [Integrated Chinese textbook](https://www.cheng-tsui.com/browse/integrated-chinese), and currently supports Chapters 1-8.
 
-    $ python chinese.py
+    $ python flashcards.py chinese
     ----------------------------------------
        Integrated Chinese Word of the Day
     ----------------------------------------
